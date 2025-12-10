@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-neutral-100 text-neutral-900 font-sans;
+  }
+  
+  h1 {
+    @apply text-5xl font-bold leading-tight tracking-tight;
+  }
+  
+  h2 {
+    @apply text-3xl font-bold leading-tight;
+  }
+  
+  h3 {
+    @apply text-xl font-semibold leading-snug;
+  }
+  
+  .body-large {
+    @apply text-lg leading-relaxed;
+  }
+  
+  .body {
+    @apply text-base leading-normal;
+  }
+  
+  .small {
+    @apply text-sm font-medium leading-tight;
+  }
+  
+  .micro {
+    @apply text-xs font-medium leading-normal;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-500 text-neutral-0 px-6 py-3 rounded-lg font-semibold text-base transition-all duration-200 hover:bg-primary-700 hover:-translate-y-0.5 active:translate-y-0 active:bg-primary-900 disabled:bg-neutral-400 disabled:cursor-not-allowed disabled:transform-none;
+  }
+  
+  .btn-secondary {
+    @apply bg-neutral-0 text-neutral-900 px-6 py-3 rounded-lg font-semibold text-base border border-neutral-100 transition-all duration-200 hover:bg-neutral-100 hover:-translate-y-0.5 active:translate-y-0;
+  }
+  
+  .card {
+    @apply bg-neutral-0 rounded-xl p-8 shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1;
+  }
+  
+  .input {
+    @apply w-full px-4 py-3 rounded-lg border border-neutral-100 bg-neutral-0 text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200;
+  }
+  
+  .select {
+    @apply w-full px-4 py-3 rounded-lg border border-neutral-100 bg-neutral-0 text-neutral-900 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200;
+  }
+  
+  .table {
+    @apply w-full border-collapse;
+  }
+  
+  .table th {
+    @apply px-6 py-4 text-left text-sm font-medium text-neutral-600 uppercase tracking-wider bg-neutral-100 border-b border-neutral-100;
+  }
+  
+  .table td {
+    @apply px-6 py-4 text-base text-neutral-900 border-b border-neutral-100;
+  }
+  
+  .table tr {
+    @apply hover:bg-neutral-100 transition-colors duration-150;
+  }
+  
+  .sidebar {
+    @apply fixed left-0 top-0 h-full w-72 bg-neutral-0/70 backdrop-blur-16 border-r border-neutral-400 z-40;
+  }
+  
+  .main-content {
+    @apply ml-72 min-h-screen p-16;
+  }
+  
+  .nav-item {
+    @apply flex items-center px-6 py-3 text-sm text-neutral-600 hover:text-neutral-900 hover:bg-primary-100 transition-all duration-200 cursor-pointer;
+  }
+  
+  .nav-item.active {
+    @apply text-primary-700 bg-primary-100 border-r-3 border-primary-500;
+  }
+  
+  .metric-card {
+    @apply bg-neutral-0 rounded-xl p-8 shadow-card;
+  }
+  
+  .metric-value {
+    @apply text-5xl font-bold text-neutral-900 mb-2;
+  }
+  
+  .metric-change {
+    @apply text-base font-medium;
+  }
+  
+  .metric-change.positive {
+    @apply text-success-500;
+  }
+  
+  .metric-change.negative {
+    @apply text-error-500;
+  }
+  
+  .status-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+  
+  .status-badge.active {
+    @apply bg-success-100 text-success-700;
+  }
+  
+  .status-badge.inactive {
+    @apply bg-neutral-100 text-neutral-600;
+  }
+  
+  .status-badge.pending {
+    @apply bg-warning-100 text-warning-700;
+  }
+  
+  .status-badge.draft {
+    @apply bg-neutral-100 text-neutral-600;
+  }
+  
+  .status-badge.paid {
+    @apply bg-success-100 text-success-700;
+  }
+  
+  .status-badge.overdue {
+    @apply bg-error-100 text-error-700;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, #4A89F7 0%, #2563EB 100%);
+  }
+  
+  .text-gradient-primary {
+    background: linear-gradient(135deg, #4A89F7 0%, #2563EB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .hover-lift {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+  }
+}
